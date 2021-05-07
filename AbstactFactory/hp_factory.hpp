@@ -1,8 +1,10 @@
 #include "abstract_factory.h"
 #include "hp_product.hpp"
 class HpFactory:public AbstactFactory{
+public:
     std::shared_ptr<Mouse>  create_mouse() override;
     std::shared_ptr<KeyBoard>  create_keyboard() override;
+    virtual ~HpFactory() = default;
 };
 
 std::shared_ptr<Mouse> HpFactory::create_mouse(){

@@ -1,8 +1,10 @@
 #include "abstract_factory.h"
 #include "dell_product.hpp"
 class DellFactory:public AbstactFactory{
+public:
     std::shared_ptr<Mouse>  create_mouse() override;
     std::shared_ptr<KeyBoard>  create_keyboard() override;
+    virtual ~DellFactory() = default;
 };
 
 std::shared_ptr<Mouse> DellFactory::create_mouse(){

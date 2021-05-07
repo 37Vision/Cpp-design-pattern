@@ -8,5 +8,6 @@ class AbstactFactory {
 public:
     virtual std::shared_ptr<Mouse> create_mouse() = 0;
     virtual std::shared_ptr<KeyBoard> create_keyboard() = 0;
+    virtual ~AbstactFactory() = default;
 };
 #endif

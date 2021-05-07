@@ -3,11 +3,15 @@
 #include <iostream>
 
 class HpMouse:public Mouse {
+public:
     void say_hello() override;
+    virtual ~HpMouse() = default;
 };
 
 class HpKeyBoard:public KeyBoard{
+public:
     void say_hello() override;
+    virtual ~HpKeyBoard() = default;
 };
 
 void HpMouse::say_hello(){
